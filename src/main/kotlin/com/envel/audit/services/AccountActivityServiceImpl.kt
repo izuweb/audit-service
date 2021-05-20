@@ -31,6 +31,6 @@ class AccountActivityServiceImpl(val accountActivityRepository: AccountActivityR
 
     @GraphQLQuery(name = "findById")
     override fun findById(@GraphQLArgument(name = "accountActivityId")accountActivityId: Long):AccountActivity {
-        TODO("Not yet implemented")
+      return  accountActivityRepository.getOne(accountActivityId)
     }
 }
